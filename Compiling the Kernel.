@@ -1,0 +1,32 @@
+Downloading the kernel from Kernel.org or by using the below command!
+
+wget https://git.kernel.org/torvalds/t/linux-xxxxxxxx.tar.gz (Choose the latest/stable tar file)
+
+Extracting the source:
+
+tar xvzf linux-xxxxxxx.tar.gz (replace xxxxxx ---> version number)
+
+
+
+Configuring the kernel:
+
+cp /boot/config-$(uname -r) .config
+
+
+Compiling and installing: 
+
+make modules_install
+
+sudo make install
+
+
+Enable the kernel for boot:
+
+sudo update-initramfs -c -k xxxxxxx (Replace xxxxx ----> version numbr)
+
+sudo update-grub
+
+
+CONGRADUALTIONS!!!!!!!!!!! 
+
+Youve Complied the Kernel! :) 
