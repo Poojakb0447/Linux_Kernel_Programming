@@ -80,3 +80,10 @@ sh configure
 make
 make install
 
+
+
+Once done with setting up the machine...
+https://lxr.sourceforge.io/en/1-0-InstallSteps/1-0-install.php
+follow the instructions... 
+you should be good to go....
+Indexing would take about 8 hrs dependingon your system config!
