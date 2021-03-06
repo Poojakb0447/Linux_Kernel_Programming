@@ -1,0 +1,82 @@
+Installing LXR on fedora.
+Dependencies and tools
+
+
+
+
+1. Check the version of perl
+perl -v
+install snap; This is just a tool that will help a lot generally
+sudo dnf install snapd
+enable classic support for snap
+sudo ln -s /var/lib/snapd/snap /snap
+
+
+
+
+2. exuberant ctags
+install ctags
+sudo snap install universal-ctags
+check installed ctags version
+ctags --version
+
+
+
+
+3. my sql
+https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb
+Adding the MySQL repository
+sudo dnf install https://repo.mysql.com//mysql80-community-release-
+fc31-1.noarch.rpm
+Installing MySQL
+sudo dnf install mysql-community-server
+Using MySQL
+sudo mysql -u root -p
+
+
+4. Install drivers to connect perl and MySQL
+Install cpan, then you can install all the drivers using these commands
+cpan App::cpanminus
+cpanm DBI
+cpanm DBD::mysql
+cpanm FIle::MMagic
+
+
+
+
+
+5. Installing a webserver
+Installing the webserver
+sudo dnf group install "Web Server"
+Configuring the system
+sudo firewall-cmd --add-service=http --add-service=https --permanent
+sudo firewall-cmd --reload
+To start the server
+sudo systemctl start httpd.service
+
+You can test the server by going to https://localhost
+
+
+
+
+6. Install agrep (a dependency for glimpse)
+download .zip from 
+https://github.com/Wikinaut/agrep
+go to the upzipped file directory and run this command make
+
+
+
+
+
+7. install glimpse
+needs dependency flex
+sudo yum install -y gcc
+sudo dnf install -y flex-dev
+sudo dnf install -y flex-devel
+Download .zip from 
+https://github.com/gvelez17/glimpse
+unzip the files and go to the directory and
+sh configure
+make
+make install
+
