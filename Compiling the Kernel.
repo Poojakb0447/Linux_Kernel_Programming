@@ -12,7 +12,7 @@ Configuring the kernel:
 
 cp /boot/config-$(uname -r) .config
 
-make
+run make command
 
 Compiling and installing: 
 
@@ -30,4 +30,4 @@ sudo update-grub
 
 CONGRADUALTIONS!!!!!!!!!!! 
 
-Youve Complied the Kernel! :) 
+You've Complied the Kernel! :) 
