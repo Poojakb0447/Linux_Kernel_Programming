@@ -12,6 +12,7 @@ Configuring the kernel:
 
 cp /boot/config-$(uname -r) .config
 
+make
 
 Compiling and installing: 
 
