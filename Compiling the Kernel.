@@ -28,6 +28,6 @@ sudo update-initramfs -c -k xxxxxxx (Replace xxxxx ----> version numbr)
 sudo update-grub
 
 
-CONGRADUALTIONS!!!!!!!!!!! 
+CONGRAUALTIONS!!!!!!!!!!! 
 
 You've Complied the Kernel! :) 
